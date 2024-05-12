@@ -1,0 +1,250 @@
+% !root= Exam 4.tex
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{setspace}
+\usepackage{units}
+\usepackage{graphicx}
+\usepackage{amsopn}
+\usepackage{bbding}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage{gensymb}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{numerica}
+\usepackage[top=1in, left=1in, right=1in, bottom=1in]{geometry}
+\AtBeginEnvironment{document}{\everymath{\displaystyle}}
+\pagestyle{plain}
+\title{EXAM 4}
+\author{MATH 1B, Bach}
+\date{Tejas Patel, Roll \#30}
+\begin{document}
+\maketitle
+
+    
+
+\section{Identifying Quadric Surfaces}
+\subsection*{I}
+Horizontal Traces: Ellipse \\Vertical Traces: Parabola \\Surface: Elliptic Paraboloid
+\subsection*{II}
+Horizontal Traces: Ellipse \\Vertical Traces: Hyperbola \\Surface: Hyperboloid of One Sheet
+\subsection*{III}
+Horizontal Traces: Hyperbola \\Vertical Traces: Ellipse \\Surface: Elliptic Cone
+\subsection*{IV}
+Horizontal Traces: Hyperbola \\Vertical Traces: Ellipse \\Surface: Hyperboloid of Two Sheets
+\subsection*{V}
+Horizontal Traces: Hyperbola \\Vertical Traces: Parabola \\Surface: Hyperbolic Paraboloid
+\subsection*{VI}
+Horizontal Traces: Ellipse \\Vertical Traces: Ellipse \\Surface: Ellipsoid\\[1in]
+\begin{multicols*}{2}
+    \subsection{For equation (a): $ \frac{x^2}{36}+\frac{y^2}{9}+\frac{z^2}{16}=1$}
+Let $k=z$ (to test the $x/y$ plane shape, the horizontal tracing)
+\vfill$ \frac{x^2}{36}+\frac{y^2}{9}=1-\frac{z^2}{16}$ is an equation for an \boxed{$ellipse$}
+\vfill$ 1-\frac{z^2}{16}\neq0$
+\vfill$ 1 \neq \frac{z^2}{16}$
+\vfill$ 16 \neq z^2$
+\vfill$ k \epsilon \mathbb{R} \;\;\; z \neq \pm 4$
+\vfill Now, let $k=y$ (to test the $x/z$ plane shape, the vertical tracing)
+\vfill$ \frac{x^2}{36}+\frac{k^2}{9}+\frac{z^2}{16}=1$
+\vfill$ \frac{x^2}{36}+\frac{z^2}{16}=1-\frac{k^2}{9}$ is an equation for an \boxed{$ellipse$}
+\vfill$ 1-\frac{k^2}{9} \neq 0$
+\vfill$ 1-\frac{k^2}{9} \neq 0$
+\vfill$ 1\neq \frac{k^2}{9}$
+\vfill$ 9 \neq k^2$
+\vfill$ k \neq \pm 3$
+\vfill Now, let $k=x$ (to test the $y/z$ plane trace, the vertical tracing)
+\vfill$ \frac{k^2}{36}+\frac{y^2}{9}+\frac{z^2}{16}=1$
+\vfill$ \frac{y^2}{9}+\frac{z^2}{16}=1-\frac{k^2}{36}$ is an equation for an \boxed{$ellipse$}
+\vfill$ 1-\frac{k^2}{36}\neq 0$
+\vfill$ 1 \neq \frac{k^2}{36}$
+\vfill$ 36 \neq k^2$
+\vfill$ k \epsilon \mathbb{R} \;\;\; k \neq \pm 6$
+\vfill As the traces on all 3 planes are ellipses, \boxed{$the shape is an ellipsoid, figure VI (6)$}\\[1in]
+\vfill\null
+\columnbreak
+\subsection*{For equation (b): $ \frac{x^2}{4}+\frac{y^2}{16}-z=0$}
+Let $k=z$ (to test the $x/y$ plane shape, the horizontal tracing)
+\vfill$ \frac{x^2}{4}+\frac{y^2}{16}-k=0$
+\vfill$ \frac{x^2}{4}+\frac{y^2}{16}=k$ This is an equation for an \boxed{$Ellipse$}
+\vfill$ k \epsilon \mathbb{R} \;\;\; k \neq 0$
+\vfill Now, let $k=x$ (to test the $y/z$ plane shape, the vertical tracing)
+\vfill$ \frac{k^2}{4}+\frac{y^2}{16}-z=0$
+\vfill$ \frac{y^2}{16}-z=-\frac{k^2}{4}$ This is an equation for a \boxed{$Parabola$}
+\vfill$-\frac{k^2}{4} \neq 0$
+\vfill${k^2} \neq 0$
+\vfill$k \epsilon \mathbb{R} \;\;\;k \neq 0$
+\vfill Now, let $k=y$ (to test the $x/z$ plane shape, the vertical tracing) 
+\vfill $ \frac{x^2}{4}+\frac{k^2}{16}-z=0$
+\vfill$ \frac{x^2}{4}-z=-\frac{k^2}{16}$ This is an equation for a \boxed{$Parabola$}
+\vfill$ 0 \neq -\frac{k^2}{16}$
+\vfill$ 0 \neq k^2$
+\vfill$ k \epsilon \mathbb{R} \;\;\; k \neq 0$
+\vfill Since the equation $ \frac{x^2}{4}+\frac{y^2}{16}-z=0$ can be rewritten as $ \frac{x^2}{4}+\frac{y^2}{16}=\frac{z}{1}$the equation represents an \boxed{$ \textbf{Elliptic Paraboloid} where $c=\pm1$, $a=\pm2$, and $b=\pm4$$} and matches with \boxed{\textbf{Figure I}}\\[2in]
+\end{multicols*}
+\begin{multicols*}{2}
+\subsection*{For equation (c): $ \frac{x^2}{4}+\frac{y^2}{16}-\frac{z^2}{4}=1$} 
+Let $k=z$ (to test the $x/y$ plane shape, the horizontal tracing)
+\vfill$ \frac{x^2}{4}+\frac{y^2}{16}-\frac{k^2}{4}=1$
+\vfill$ \frac{x^2}{4}+\frac{y^2}{16}=1+\frac{k^2}{4}$ is an equation for an \boxed{$Ellipse$}
+\vfill$ 1+\frac{k^2}{4}\neq 0$
+\vfill$ \frac{k^2}{4}\neq -1$ has no solutions in the real number spectrum
+\vfill Meaning $k \epsilon \mathbb{R} $
+\vfill Now, let $k=x$ (to test the $y/z$ plane shape, the vertical tracing)
+\vfill$ \frac{k^2}{4}+\frac{y^2}{16}-\frac{z^2}{4}=1$
+\vfill$ \frac{y^2}{16}-\frac{z^2}{4}=1-\frac{k^2}{4}$ is an equation for a \boxed{$Hyperbola$}
+\vfill$ 1-\frac{k^2}{4}\neq 0$
+\vfill$ 1 \neq \frac{k^2}{4}$
+\vfill$ 4 \neq k^2$
+\vfill$ k \epsilon \mathbb{R} \;\;\; k \neq \pm 2$
+\vfill Now, let $k=y$ (to test the $x/z$ plane shape, the vertical tracing)
+\vfill$ \frac{x^2}{4}+\frac{k^2}{16}-\frac{z^2}{4}=1$
+\vfill$ \frac{x^2}{4}-\frac{z^2}{4}=1-\frac{k^2}{16}$ is an equation for a \boxed{$Hyperbola$}
+\vfill$ 1-\frac{k^2}{16} \neq 0$
+\vfill$ 1 \neq \frac{k^2}{16} $
+\vfill$ 16 \neq {k^2} $
+\vfill$ k \epsilon \mathbb{R} \;\;\; k \neq \pm 4 $
+\vfill The equation $ \frac{x^2}{4}+\frac{y^2}{16}-\frac{z^2}{4}=1$ is an equation for a \boxed{$\textbf{Hyperboloid of One Sheet}$} where $a=c=\sqrt{4} = 2$ and $b=\sqrt{16}=4$, matching \boxed{$\textbf{Figure II}$}\\[1in]
+\vfill\null
+\columnbreak
+\subsection*{For equation (d): $ x^2-4y^2-z^2=4$}
+Let $k=z$ (to test the $x/y$ plane shape, the horizontal tracing)
+\vfill $ x^2-4y^2-k^2=4$
+\vfill $ x^2-4y^2=4+k^2$ is an equation of a \boxed{$Hyperbola$}
+\vfill $ 4+k^2 \neq 0$ 
+\vfill $ k^2 \neq -4$ is true for all real numbers
+\vfill$ k \epsilon \mathbb{R}$
+\vfill Now, let $k=x$ (to test the $y/z$ plane shape, the vertical tracing)
+\vfill $ k^2-4y^2-z^2=4$
+\vfill $ -4y^2-z^2=4-k^2$
+\vfill $ 4y^2+z^2=k^2-4$ is an equation for an \boxed{$Ellipse$}
+\vfill $ k^2-4 \neq 0$
+\vfill $ k^2 \neq 4$
+\vfill $ k \epsilon \mathbb{R}\;\;\; k \neq \pm 2$
+\vfill Now, let $k=y$ (to test the $x/z$ plane shape, the vertical tracing)
+\vfill $ x^2-4k^2-z^2=4$
+\vfill $ x^2-z^2=4+4k^2$ is an equation of a \boxed{$Hyperbola$}
+\vfill $ 4+4k^2 \neq 0$
+\vfill $ 4k^2 \neq -4$
+\vfill $ k^2 \neq -1$ is true for all real numbers
+\vfill$ k \epsilon \mathbb{R}$
+\vfill The equation $ x^2-4y^2-z^2=4$ can be rewritten as $ \frac{x^2}{4}-y^2-\frac{z^2}{4}=1$ making the quadric a \boxed{$Hyperboloid of Two Sheets.$} The $x$ and $z$ variables are both negative, making the graph center go through the $x$ axis, corresponding to \boxed{$Figure IV$}\\[1in]
+\end{multicols*}
+\subsection*{For equation (e): $ 9y^2-4x^2-9z=0$}
+Let $k=z$ (to test the $x/y$ plane shape, the horizontal tracing)
+\vfill $ 9y^2-4x^2-9k=0$
+\vfill $ 9y^2-4x^2=9k$ is an equation of a \boxed{$Hyperbola$}
+\vfill $ 9k \neq 0$
+\vfill $ k \epsilon \mathbb{R}\;\;\; k \neq 0$
+\vfill Now, let $k=x$ (to test the $y/z$ plane shape, the vertical tracing)
+\vfill $ 9y^2-4k^2-9z=0$
+\vfill $ 9y^2-9z=4k^2$ is an equation of a \boxed{$Parabola$}
+\vfill $ 4k^2 \neq 0$
+\vfill $ k \epsilon \mathbb{R}\;\;\;  k \neq 0$
+\vfill Now, let $k=y$ (to test the $x/z$ plane shape, the vertical tracing)
+\vfill $ 9k^2-4x^2-9z=0$
+\vfill $ -4x^2-9z=-9k^2$ is an equation of a \boxed{$Parabola$}
+\vfill $ -9k^2 \neq 0$
+\vfill $ k^2 \neq 0$
+\vfill $ k \epsilon \mathbb{R}\;\;\;  k \neq 0$
+\vfill The equation $ 9y^2-4x^2-9z=0$ carries the format of a \boxed{$Hyperbolic Paraboloid, represented in Figure V$}, where the z axis value is the non-exponential and the y variable is the positive squared variable\\[3in]
+
+\pagebreak
+\section{$ \sum_{n=1}^{\infty}  (-1)^n \frac{(x+5)^n}{n\cdot 3^n}$}
+\begin{multicols*}{2}
+    
+
+\subsection*{a) Finding the radius of convergence}
+Method: Ratio Test $R =  \lim_{n\to\infty}\left| \frac{a_{n+1}}{a_n} \right|$ where the series converges if $|R|<1$
+\\[0.1in]and where $a_n$ denotes the $n_{th}$ term of the series and $r$ is the radius of convergence
+\\[0.1in] $a_n= (-1)^n \frac{(x+5)^n}{n\cdot 3^n}$
+\\[0.1in]$ R=\lim_{n \to \infty}  \left| \dfrac{(-1)^{\cancelto{}{n+1}} \dfrac{(x+5)^{n+1}}{(n+1)\cdot 3^{n+1}}}{\cancelto{1}{(-1)^n} \dfrac{(x+5)^n}{n\cdot 3^n}}\right|$
+\\[0.1in]$ R=\lim_{n \to \infty}  \left| \dfrac{(x+5)^{\cancelto{}{n+1}}}{(n+1)\cdot 3^{\cancelto{}{n+1}}}\cdot \dfrac{n\cdot \cancelto{1}{3^n}}{\cancelto{1}{(x+5)^n}}\right|$
+\\[0.1in]$ R=\lim_{n \to \infty}  \left| \dfrac{n\cdot(x+5)}{3\cdot(n+1)}\right|$
+\\[0.1in]$ R =\left|x+5\right| \lim_{n \to \infty}  \left| \dfrac{n}{3\cdot(n+1)}\right|$
+\\[0.1in]$ R =\left|{x+5}\right| \cdot \left|\frac{1}{3}\right|$
+\\[0.1in]$ \left|\dfrac{x+5}{3}\right| = 1$
+\\[0.1in]$ \left|{x+5}\right| = 3$
+\\[0.1in]\boxed{r= 3}
+\\[2in]\boxed{\textbf{The radius of convergence is 3}}
+\\\boxed{$\textbf{and the interval of convergence is} $-8  < x \leq -2}
+\vfill\null
+\columnbreak
+\subsection*{b) Finding the Interval of Convergence}
+The series converges if $ \left|\dfrac{x+5}{3}\right|<1$
+\\[0.1in]$-1< \dfrac{x+5}{3}<1$
+\\[0.1in]$-3<{x+5}<3$
+\\[0.1in]$-8<x<-2$
+\\\textbf{Testing the endpoints:}
+\\\textbf{Lower:} $ \sum_{n=1}^{\infty}  (-1)^n \frac{(-8+5)^n}{n\cdot 3^n}$
+\\[0.1in]$ \sum_{n=1}^{\infty}  (-1)^n \frac{(-3)^n}{n\cdot 3^n}$
+\\[0.1in]The $\dfrac{(-3)^n}{3^n}$ can be reduced to $(-1)^n$
+\\[0.1in]$ \sum_{n=1}^{\infty}  (-1)^n \frac{(-1)^n}{n}$
+\\[0.1in]The ${(-1)^n}{(-1)^n}$ can be reduced to $(-1)^{2n}$, which can be reduced to $1^n$, which is equal to 1 for all real numbers
+\\[0.1in]$ \sum_{n=1}^{\infty}\frac{1}{n}$ \boxed{$diverges by the Harmonic Series Test$}, meaning -8 can not be included in the interval of convergence
+\\[0.1in]\textbf{Upper:} $ \sum_{n=1}^{\infty}  (-1)^n \frac{(-2+5)^n}{n\cdot 3^n}$
+\\[0.1in]$ \sum_{n=1}^{\infty}  (-1)^n \frac{3^n}{n\cdot 3^n}$
+\\[0.1in]$ \sum_{n=1}^{\infty}  (-1)^n \frac{\cancelto{1}{3^n}}{n\cdot \cancelto{1}{3^n}}$
+\\[0.1in]$ \sum_{n=1}^{\infty} \frac{(-1)^n}{n}$ is \boxed{$convergent by the Alternating Series Test$}, meaning that $-2$ is part of the interval of convergence
+\\[0.1in]After testing endpoints, we can conclude the interval of convergence is  \boxed{-8  < x \leq -2}
+
+\end{multicols*}
+
+\section{$ f(x)=\dfrac{x^2}{3x+4}$}
+\subsection*{Conversion to a power series}
+To be easily converted to a power series $ \sum_{n=0}^{\infty}ar^n$, the equation will need the form of $ \frac{a}{1-r}$
+\\[0.1in] We can first divide by $ x^2$ and get $ f(x) = x^2 \frac{1}{3x+4}$
+\\[0.1in] Separating out a $ 4$ from the denominator get $ f(x) = x^2 \cdot \dfrac{1}{4} \cdot \dfrac{1}{\dfrac{3x}{4}+1}$ 
+\\ Which can be rearranged as $ f(x) =  \cdot \dfrac{x^2}{4} \cdot \dfrac{1}{1+ \dfrac{3x}{4}}$
+\\[0.05in] When $a=1$, $r =  - \dfrac{3x}{4}$, the power series can be represented as $ f(x) = \dfrac{x^2}{4}  \sum_{n=0}^{\infty}\left(-\dfrac{3x}{4}\right)^n$
+\\[0.05in] $ f(x) = \dfrac{x^2}{4}  \sum_{n=0}^{\infty}\left(-\dfrac{3x}{4}\right)^n$
+\\[0.05in] Distributing the power $ f(x) = \dfrac{x^2}{4}  \sum_{n=0}^{\infty}\dfrac{(-1)^n\cdot3^n\cdot x^n}{4^n}$
+\\[0.05in] Since $x^2\cdot x^n = x^{n+2}$ and $4 \cdot 4^n = 4^{n+1}$, substituting them in we get $ f(x) =   \sum_{n=0}^{\infty}\dfrac{(-1)^n\cdot3^n\cdot x^{n+2}}{4^{n+1}}$
+\\[0.05in] Similar to section 11.9 example 3, we can shift the indices $ f(x) =   \sum_{n=2}^{\infty}\dfrac{(-1)^{n-2}\cdot3^{n-2}\cdot x^{n}}{4^{n-1}}$
+\\[0.05in] Plugging this back in, \boxed{\dfrac{x^2}{3x+4} =  \sum_{n=2}^{\infty}\dfrac{(-1)^{n-2}\cdot3^{n-2}\cdot x^{n}}{4^{n-1}}}
+\subsection*{Finding radius of convergence}
+Method: Ratio Test $R =  \lim_{n\to\infty}\left| \frac{a_{n+1}}{a_n} \right|$ where the series converges if $|R|<1$
+\\[0.1in]and where $a_n$ denotes the $n_{th}$ term of the series and r is the radius of convergence
+\\[0.1in] $a_n= \dfrac{(-1)^{n-2}\cdot3^{n-2}\cdot x^{n}}{4^{n-1}}$
+\\[0.1in] $R=\lim_{n\to\infty} \left|   \dfrac{\dfrac{(-1)^{n-1}\cdot3^{n-1}\cdot x^{n+1}}{4^{n}}}{\dfrac{(-1)^{n-2}\cdot3^{n-2}\cdot x^{n}}{4^{n-1}}}    \right|$
+\\[0.1in] $R=\lim_{n\to\infty} \left|   \dfrac{(-1)^{\cancelto{}{n-1}}\cdot3^{\cancelto{}{n-1}}\cdot x^{\cancelto{}{n+1}}}{4^{\cancelto{}{n}}}\cdot \dfrac{\cancelto{}{4^{n-1}}}{\cancelto{1}{(-1)^{n-2}\cdot3^{n-2}\cdot x^{n}}}    \right|$
+\\[0.1in] $R=\lim_{n\to\infty} \left|   \dfrac{-3x}{4} \right|$
+\\[0.1in] $R=\left|   \dfrac{-3x}{4} \right|$
+\\[0.1in] $\left|   \dfrac{-3x}{4} \right| = 1$
+\\[0.1in] $\left|   -3x \right| = 4$
+\\[0.1in] $3x = 4$
+\\[0.1in] \boxed{r= \frac{4}{3}}
+
+\subsection*{Finding interval of convergence}
+The series converges if $\left|   \dfrac{-3x}{4} \right| < 1$
+\\[0.1in] $-1< \dfrac{3x}{4} < 1$
+\\[0.1in] $-4< 3x < 4$
+\\[0.1in] $-\frac{4}{3}< x < \frac{4}{3}$
+\\[0.1in]\textbf{Testing the endpoints:}
+\begin{multicols*}{2}
+    Upper Endpoint: $x=\frac{4}{3}$
+    \\[0.05in]$ \sum_{n=2}^{\infty}\dfrac{(-1)^{n-2}\cdot3^{n-2}\cdot \frac{4}{3}^{n}}{4^{n-1}}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{(-3)^{n-2}\cdot \frac{4}{3}^{n}}{4^{n-1}}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{(-3)^{n-2}\cdot \frac{4}{3}^{n-2} \cdot \frac{4}{3}^2}{4^{n-2}\cdot4}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{(-4)^{n-2}\cdot \frac{4}{3}^2}{4^{n-2}\cdot4}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{(-1)^{n-2}\cdot {16}}{4\cdot 9}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{(-1)^{n-2}\cdot {4}}{ 9}$
+    \\[0.05in]This series is divergent by the Ratio Test, where the ratio is 1, meaning the upper endpoint can not be included in the interval of convergence
+    \\[0.5in]\boxed{\textbf{Radius of Convergence: $\frac{4}{3}$}}\\\boxed{\textbf{Interval of Convergence: $-\frac{4}{3}< x < \frac{4}{3}$}}
+    \vfill\null
+    \columnbreak
+
+    Lower Endpoint: $x=-\frac{4}{3}$
+    \\[0.05in]$ \sum_{n=2}^{\infty}\dfrac{(-1)^{n-2}\cdot3^{n-2}\cdot -\frac{4}{3}^{n}}{4^{n-1}}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{(-3)^{n-2}\cdot -\frac{4}{3}^{n}}{4^{n-1}}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{(-3)^{n-2}\cdot -\frac{4}{3}^{n-2} \cdot -\frac{4}{3}^2}{4^{n-2}\cdot4}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{\cancelto{1}{4^{n-2}}\cdot -\frac{4}{3}^2}{\cancelto{1}{4^{n-2}}\cdot4}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{\left( -\frac{4}{3}\right)^2}{4}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{16}{4\cdot 9}$
+    \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{4}{9}$
+    \\[0.05in]This series is divergent by the Ratio Test, where the ratio is 1, meaning the lower endpoint can not be included in the interval of convergence
+\end{multicols*}
+\end{document}
