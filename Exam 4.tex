@@ -297,15 +297,269 @@ The series converges if $\left|   \dfrac{-3x}{4} \right| < 1$
         \item $\frac{(\ln(9))^4}{4!}$
         \item $\frac{-(\ln(9))^5}{5!}$
     \end{enumerate}
-    The emergent pattern seems to be \boxed{\frac{f^{(n)}(0)}{n!}=\frac{(-\ln(9))^n}{n!}}
+    The emergent pattern seems to be \boxed{\frac{f^{(n)}(0)}{n!}=(-1)^n\frac{(\ln(9))^n}{n!}}
     \subsection*{\textbf{The Maclaurin Series}}
-    Using the known coefficient pattern, we can multiply the general term by $x^n$ and make it a summation \boxed{\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^n=\sum_{n=0}^{\infty}\frac{(-\ln(9))^n}{n!}x^n}
+    Using the known coefficient pattern, we can multiply the general term by $x^n$ and make it a summation \boxed{\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^n=\sum_{n=0}^{\infty}(-1)^n\frac{(\ln(9))^n}{n!}x^n}
 
 \end{multicols*}
 \section{Line L passes through $A(4, -3, 5)$ and $B(-2, -1, 8)$}
-For the purposes of this problem, I will use the vector going in the direction from points $A$ to $B$
-\\
 \subsection*{Vector Equation}
+For the purposes of this problem, I will use the vector going in the direction from point $A$ to point $B$
+\\We can create a vector $\vec{v}$ that is parallel to $\overrightarrow{AB}$
+\\The variable $t$ will represent a scalar parameter to any equation in the scope of this problem that takes in a parameter as an input
+\\This vector $\vec{v}$ can be found using the formula $B-A$ and is calculated using $\Vec{v} =\langle B_x-A_x, B_y-A_y, B_z-A_z\rangle$
+\\$\vec{v}=\langle-2-4, -1-(-3), 8-5\rangle = \langle-6, 2, 3\rangle$
+\\Now using $\vec{r} = \vec{r_0}+t\vec{v}$, where $r_0$ is the tail point of the vector, denoted by point $A(4, -3, 5)$ for this example, we can compute the tip of the vector given a parameter and the following vector equation:
+\\[0.1in]$\vec{r} = (4, -3, 5) + t\langle-6,2,3\rangle$
+\\[0.1in]$\vec{r} = (4, -3, 5) + \langle-6t,2t,3t\rangle$
+\\[0.1in]\boxed{\vec{r} = \langle4-6t,2t-3,3t+5\rangle}
 \subsection*{Parametric Equations}
+Using Theorem \#2 in section 12.5 of the textbook, Parametric equations for a line through the point $(x_0, y_0, z_0)$ and parallel to the direction vector $\langle a,b,c\rangle$ are:
+\\[0.05in]$x=x_0+at\qquad y=y_0+bt \qquad z=z_0+ct$
+\\[0.05in]$(x_0,y_0,z_0)$ will be the tail of the vector, point $A(4, -3, 5)$, and $\langle a,b,c\rangle$  will be the respective components of defined vector $\vec{v}$, \\$\vec{v} = \langle-6, 2, 3\rangle$
+\\[0.05in]By Theorem \#2 in section 12.5, \boxed{x=4-6t\qquad y=-3+2t\qquad z=5+3t}
 \subsection*{Symmetric Equation}
+To find a symmetric equation, we can solve all 3 of our parametric equations for the variable $t$, assuming none of the components of $\langle a,b,c\rangle$ are 0, which would introduce division by zero
+\\$x=4-6t$\hfill$y=-3+2t$\hfill$z=5+3t$\hfill\null
+\\[0.05in]$x-4=-6t$\hfill$y+3=2t$\hfill$z-5=3t$\hfill\null
+\\[0.05in]\boxed{\frac{x-4}{-6}=t}\hfill\boxed{\frac{y+3}{2} =t}\hfill\boxed{\frac{z-5}{3}=t}\hfill\null
+\\[0.05in] Combining these into a single equation to eliminate the parameter $t$, we get the Symmetric Equation \\[0.05in]\begin{center}\boxed{\frac{x-4}{-6}=\frac{y+3}{2}=\frac{z-5}{3}}\end{center}
+\subsection{Intersecting the planes}
+The line $\frac{x-4}{-6}=\frac{y+3}{2}=\frac{z-5}{3}$ intersects the $xy$ plane when $z=0$
+\\[0.1in]$\frac{x-4}{-6}=\frac{y+3}{2}=\frac{-5}{3}$
+\\[0.1in]$\frac{x-4}{-6}=\frac{-5}{3}$
+\\[0.1in]${x-4}=\frac{-5\cdot -6}{3}$
+\\[0.1in]${x-4}=10$
+\\[0.1in]\boxed{x=14}
+\\[0.1in]$\frac{y+3}{2}=\frac{-5}{3}$
+\\[0.1in]${y+3}=\frac{-5\cdot 2}{3}$
+\\[0.1in]${y+3}=\frac{-10}{3}$
+\\[0.1in]${y}=\frac{-10}{3}-3$
+\\[0.1in]\boxed{y=\frac{-19}{3}}
+\\Making the $xy$ plane intersection coordinates \boxed{(14,\frac{-19}{3},0)}
+\\The line $\frac{x-4}{-6}=\frac{y+3}{2}=\frac{z-5}{3}$ intersects the $xz$ plane when $y=0$
+\\[0.1in]$\frac{x-4}{-6}=\frac{3}{2}=\frac{z-5}{3}$ 
+\\[0.1in]$\frac{x-4}{-6}=\frac{3}{2}$ 
+\\[0.1in]${x-4}=\frac{-6\cdot3}{2}$ 
+\\[0.1in]${x-4}=\frac{-18}{2}$ 
+\\[0.1in]${x-4}={-9}$ 
+\\[0.1in]\boxed{{x}={-5}}
+\\[0.1in]$\frac{3}{2}=\frac{z-5}{3}$ 
+\\[0.1in]$\frac{3\cdot 3}{2}={z-5}$ 
+\\[0.1in]$\frac{9}{2}={z-5}$ 
+\\[0.1in]\boxed{z=\frac{19}{2}}
+\\[0.1in]Making the intersection point to the $xz$ plane \boxed{(-5,0,\frac{19}{2})}
+\\The line $\frac{x-4}{-6}=\frac{y+3}{2}=\frac{z-5}{3}$ intersects the $yz$ plane when $x=0$
+\\[0.1in]$\frac{-4}{-6}=\frac{y+3}{2}=\frac{z-5}{3}$
+\\[0.1in]$\frac{-4}{-6}=\frac{y+3}{2}=\frac{z-5}{3}$
+\\[0.1in]$\frac{4}{6}=\frac{y+3}{2}=\frac{z-5}{3}$
+\\[0.1in]$\frac{4}{6}=\frac{y+3}{2}$
+\\[0.1in]$\frac{8}{6}={y+3}$
+\\[0.1in]$\frac{8}{6}-3={y}$
+\\[0.1in]$y=\frac{-10}{6}$
+\\[0.1in]\boxed{y=\frac{-5}{3}}
+\\[0.1in]$\frac{-4}{-6}=\frac{z-5}{3}$
+\\[0.1in]$\frac{-4\cdot 3}{-6}={z-5}$
+\\[0.1in]$\frac{-12}{-6}={z-5}$
+\\[0.1in]$2={z-5}$
+\\[0.1in]\boxed{z=7}
+\\[0.1in]Making the intersection point to the $yz$ plane \boxed{(0,\frac{-5}{3}, 7)}
+\subsection{Distance to Point $C(-1,4,-6)$}
+This can be calculated using $d=\frac{|\vec{v}\times\vec{BC}|}{|\vec{v}|} $ where 
+\\[0.1in]$\vec{v}= \langle-6, 2, 3\rangle$ and $\vec{BC}=C-B =\langle-1-(-2), 4-(-1), -6-8\rangle = \langle1, 5, -14\rangle$
+\textbf{$\vec{v}\times\vec{BC}$}
+\\[0.1in]Starting off with the matrix
+$\vec{v} \times \vec{BC} = $
+$\begin{vmatrix}
+i & j & k \\
+-6 & 2 & 3 \\
+1 & 5 & -14
+\end{vmatrix}$
+\\[0.05in]$\vec{v}\times\vec{BC} = i(2\cdot-14-3\cdot5)-j(-6\cdot-14-3\cdot 1)+k(-6\cdot5-2\cdot1)$
+\\[0.05in]$\vec{v}\times\vec{BC} = i(-28-15)-j(84-3)+k(-30-2)$
+\\[0.05in]$\vec{v}\times\vec{BC} = i(-43)-j(81)+k(-32)$
+\\[0.05in]$\vec{v}\times\vec{BC} = \langle-43,-81,-32\rangle$
+\\Finding the magnitude is easy using the Pythagorean theorem for 3 dimensions
+\\$|\vec{v}\times\vec{BC}|=\sqrt{(-43)^2+(-81)^2+(-32)^2}$
+\\$|\vec{v}\times\vec{BC}|=\sqrt{1849+6561+1024}$
+\\$|\vec{v}\times\vec{BC}|=\boxed{\sqrt{9434}}$
+\\[0.05in]Now to divide it by the magnitude of $\vec{v}$
+\\[0.05in]$|\vec{v}| = \sqrt{(-6^2)+2^2+3^2}$
+\\$|\vec{v}| = \sqrt{36+4+9}$
+\\$|\vec{v}| = \sqrt{49}$
+\\$|\vec{v}| = 7$
+\\\boxed{d=\frac{\sqrt{9434}}{7}}
+
+
+\pagebreak
+\section{Maclaurin Series for $\tan^{-1}x=\sum_{n=0}^{\infty}\frac{(-1)^n\cdot x^{2n+1}}{2n+1}$}
+\subsection*{Power Series for $f(x)=x^3\cdot\tan^{-1}(x^2)$}
+Given that we know the Maclaurin Series for $\tan^{-1}(x)$, modifying the power series for our new equation is straightforward
+\\\textbf{Modifying the x}
+As $x$ is not the index variable in the infinite series, it is fully permeable through the membrane of the sigma function. This will be accomplished by directly substituting the variable, similar to what was shown in example 11 in Section 11.10 in the textbook
+\\$\tan^{-1}(x)=\sum_{n=0}^{\infty}\frac{(-1)^n\cdot x^{2n+1}}{2n+1}$
+\\$x^3 \cdot \tan^{-1}(x^2)=x^3\sum_{n=0}^{\infty}\frac{(-1)^n\cdot (x^2)^{2n+1}}{2n+1}$
+\\Multiplying together the stacked exponents: $x^3\cdot \tan^{-1}(x^2)=x^3\sum_{n=0}^{\infty}\frac{(-1)^n\cdot x^{4n+2}}{2n+1}\qquad$ as $2\cdot 2n+1=4n+2$
+\\[0.1in]Moving the $x^3$ across the sigma function membrane, we get $x^3\cdot \tan^{-1}(x^2)=\sum_{n=0}^{\infty}\frac{(-1)^n\cdot x^{4n+2}\cdot x^3}{2n+1}\qquad$
+\\[0.1in]Simplifies to $x^3\cdot \tan^{-1}(x^2)=\sum_{n=0}^{\infty}\frac{(-1)^n\cdot x^{4n+2+3}}{2n+1}\qquad$
+\\[0.1in]$x^3\cdot \tan^{-1}(x^2)=\sum_{n=0}^{\infty}\frac{(-1)^n\cdot x^{4n+2+3}}{2n+1}\qquad$
+\\[0.1in]\boxed{x^3\cdot \tan^{-1}(x^2)=\sum_{n=0}^{\infty}\frac{(-1)^n\cdot x^{4n+5}}{2n+1}\qquad}
+\\[0.1in]\textbf{Checking for Convergence in the interval of integration} 
+\\[0.05in]Using the Ratio test
+\\[0.05in]Using $a_n = \frac{(-1)^n\cdot x^{4n+5}}{2n+1}$ we can do the ratio test $R =\lim_{n\to\infty} \left|\frac{a_{n+1}}{a_n}\right|$ and the series converges for $R < 1$
+\\[0.05in]$R=\lim_{n\to\infty} \left|\frac{\frac{(-1)^{n+1}\cdot x^{4{(n+1)}+5}}{2{(n+1)}+1}}{\frac{(-1)^n\cdot x^{4n+5}}{2n+1}}\right|$
+\\[0.05in]$R=\lim_{n\to\infty} \left|\frac{(-1)^{\cancelto{}{n+1}}\cdot x^{\cancelto{4}{4n+9}}}{2{(n+1)}+1}\cdot\frac{2n+1}{\cancelto{1}{(-1)^n}\cdot \cancelto{1}{x^{4n+5}}}\right|$
+\\[0.05in]$R=\lim_{n\to\infty} \left|\frac{-x\cdot(2n+1)}{2n+3}\right|$
+\\[0.05in]$R=|-x| \cancelto{1}{\lim_{n\to\infty} \left|\frac{(2n+1)}{2n+3}\right|}$
+\\$R=|-x|$
+\\$-1<-x<1$
+\\$1>x>-1$ 
+\\Since the series is for sure convergent for all values between $x=-1$ and $x=1$, we know it is convergent for the interval $[0,\frac{1}{2}]$
+\\[1in]
+\textbf{Integrating $\int_{0}^{\frac{1}{2}}x^3\cdot \tan^{-1}(x^2)\;dx$}
+\\Given the power series for $x^3\cdot \tan^{-1}(x^2)$ as $\sum_{n=0}^{\infty}\frac{(-1)^n\cdot x^{4n+5}}{2n+1}$
+\\[0.1in]We can start off with $\int_{0}^{\frac{1}{2}}x^3\cdot \tan^{-1}(x^2)\;dx = \int_{0}^{\frac{1}{2}}\sum_{n=0}^{\infty}\frac{(-1)^n\cdot {x^{4n+5}}}{2n+1}dx$
+\\[0.1in]We can move everything not bound to the variable $x$ out of the integrand, including the sigma function
+\\[0.1in]$= \sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}\int_{0}^{\frac{1}{2}} x^{4n+5}dx$
+\\[0.1in]\textbf{Evaluating the integral using the power rule}
+\\[0.05in]$= \sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}\int_{0}^{\frac{1}{2}} x^{4n+5}dx$
+\\[0.05in]$=\sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}\frac{x^{4n+6}}{4n+6} \bigg|_{x=0}^{x=\frac{1}{2}}$
+\\[0.05in]$=\sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}\frac{(\frac{1}{2})^{4n+6}}{4n+6} -\cancelto{0}{\sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}\frac{0^{4n+6}}{4n+6}} $
+\\[0.05in]=\boxed{\sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}\frac{(\frac{1}{2})^{4n+6}}{4n+6}}
+\\[0.1in]Using a calculator, we can calculate the values of each term to find where $|$Error$| < 1.0\cdot 10^{-9} $or$ \frac{1}{1,000,000,000}$
+\begin{enumerate}
+    \setcounter{enumi}{-1}
+    \item $\frac{1}{384} = 0.0026041666$
+    \item $\frac{-1}{30720}=-0.000032552083$
+    \item $\frac{1}{1146880}=8.7193080357\cdot 10^{-7}$
+    \item $\frac{-1}{33030144} =-3.0275375124\cdot 10^{-8}$
+    \item $\frac{1}{830472192} = 1.204134237886 \cdot 10^{-9}$
+    \item $\frac{-1}{19193135104} = -5.210196221625\cdot 10^{-11}$ - This term is the error as it is the first term below $10^{-9}$
+\end{enumerate}
+Giving us the series: \boxed{\frac{1}{384}-\frac{1}{30720}+\frac{1}{1146880}-\frac{1}{33030144}+\frac{1}{830472192}}
+Or: \boxed{\sum_{n=0}^{4}\frac{(-1)^n}{2n+1}\frac{(\frac{1}{2})^{4n+6}}{4n+6}}
+\vfill\null\pagebreak
+\section{$A(2, 6, 5), B(-1, 3, 4), C(-1, -5, 7)$}
+\subsection{Side Lengths}
+\textbf{$\vec{|AB|}$}
+\\[0.1in] $\vec{AB} = B-A$
+\\[0.1in] $=\langle-1-2,3-6,4-5\rangle$
+\\[0.1in] $=\langle-3,-3,-1\rangle$
+\\[0.1in] Now for magnitude $=\sqrt{(-3)^2+(-3)^2+(-1)^2} =$ \boxed{\sqrt{19}}
+\\[0.1in]\textbf{$\vec{|AC|}$}
+\\[0.1in] $\vec{AC} = C-A$
+\\[0.1in] $=\langle-1-2,-5-6,7-5\rangle$
+\\[0.1in] $=\langle-3,-11,2\rangle$
+\\[0.1in] Now for magnitude $=\sqrt{(-3)^2+(-11)^2+(2)^2} =\sqrt{9+121+4}$ \boxed{\sqrt{134}}
+\\[0.1in]\textbf{$\vec{|BC|}$}
+\\[0.1in] $\vec{BC} = C-B$
+\\[0.1in] $=\langle-1-(-1),-5-3,7-4\rangle$
+\\[0.1in] $=\langle0,-8,3\rangle$
+\\[0.1in] Now for magnitude $=\sqrt{(0)^2+(-8)^2+(3)^2} =\sqrt{0+64+9}$ \boxed{\sqrt{73}}
+\subsection{Angles}
+Theorem: $|A\times B|=|A||B|\sin(\theta)$
+\\[0.1in]$|\vec{AB}\times \vec{BC}|=|\vec{AB}||\vec{BC}|\sin(\theta)$
+\\[0.1in]$\vec{AB} \times \vec{BC} = $
+$\begin{vmatrix}
+i & j & k \\
+-3 & -3 & -1 \\
+0 & -8 & 3
+\end{vmatrix}$
+\\[0.1in]$\vec{AB} \times \vec{BC} = i(-3\cdot3-(-1)\cdot -8)-j(-3\cdot 3-(-1)\cdot 0)+k(-3\cdot-8-3\cdot 0)$
+\\[0.1in]$\vec{AB} \times \vec{BC} = i(-17)-j(-9)+k(24)$
+\\[0.1in]$\vec{AB} \times \vec{BC} = \langle-17,9,24\rangle$
+\\[0.1in]$|\vec{AB} \times \vec{BC}| = \sqrt{(-17)^2+9^2+(24)^2}$
+\\[0.1in]$|\vec{AB} \times \vec{BC}| = \sqrt{(-17)^2+9^2+(24)^2}$
+\\[0.1in]$|\vec{AB} \times \vec{BC}| = \sqrt{946}$
+\\[0.1in]$\sqrt{946}=\sqrt{19}\sqrt{73}\sin\theta$
+\\[0.1in]$\frac{\sqrt{946}}{\sqrt{19}\sqrt{73}}=\sin\theta$
+\\[0.1in]$\arcsin\frac{\sqrt{946}}{\sqrt{19}\sqrt{73}}=\theta$
+\\[0.1in]$55.68\degree=\theta$ 
+\\[0.1in]However, since that input exceeds the maximum possible angle that arcsin can provide ($90\degree$), we need to subtract the output from $180\degree$ to get the final angle
+\\[0.1in]$180\degree-55.68\degree=$ \boxed{\theta =124.32\degree} for angle $\angle ABC$
+\\[0.1in]$|\vec{AC}\times \vec{BC}|=|\vec{AC}||\vec{BC}|\sin(\theta)$
+\\[0.1in]$\vec{AC} \times \vec{BC} = $
+$\begin{vmatrix}
+i & j & k \\
+-3 & -11 & 2 \\
+0 & -8 & 3
+\end{vmatrix}$
+\\[0.1in]$\vec{AC} \times \vec{BC} = i(-11\cdot3-2\cdot -8)-j(-3\cdot 3-2\cdot 0)+k(-3\cdot-8-11\cdot 0)$
+\\[0.1in]$\vec{AC} \times \vec{BC} = i(-17)-j(-9)+k(24)$
+\\[0.1in]$\vec{AC} \times \vec{BC} = \langle-17,9,24\rangle$
+\\[0.1in]$|\vec{AC} \times \vec{BC}| = \sqrt{(-17)^2+(9)^2+(24)^2}$
+\\[0.1in]$|\vec{AC} \times \vec{BC}| = \sqrt{946}$
+\\[0.1in]$\sqrt{946} = \sqrt{134}\sqrt{73}\sin\theta$
+\\[0.1in]$\frac{\sqrt{946}}{\sqrt{134}\sqrt{73}} = \sin\theta$
+\\[0.1in]$\arcsin\frac{\sqrt{946}}{\sqrt{134}\sqrt{73}} = \theta$
+\\[0.1in]\boxed{\theta = 18.12\degree} for angle $\angle ACB$
+\\[0.1in]$|\vec{AB}\times \vec{AC}|=|\vec{AB}||\vec{AC}|\sin(\theta)$
+\\[0.1in]$\vec{AB} \times \vec{AC} = $
+$\begin{vmatrix}
+i & j & k \\
+-3 & -3 & -1 \\
+-3 & -11 & 2
+\end{vmatrix}$
+\\[0.1in]$\vec{AB} \times \vec{AC} = i(-3\cdot2-(-1)\cdot -11)-j(-3\cdot 2-(-1)\cdot -3)+k(-3\cdot-11-(-3)\cdot -3)$
+\\[0.1in]$\vec{AB} \times \vec{AC} = i(-6-11)-j(-6-3)+k(33-9)$
+\\[0.1in]$\vec{AB} \times \vec{AC} = i(-17)-j(-9)+k(24)$
+\\[0.1in]$\vec{AB} \times \vec{AC} = \langle-17,99,24\rangle$
+\\[0.1in]$|\vec{AB} \times \vec{AC}| = \sqrt{(-17)^2+(9)^2+24^2}$
+\\[0.1in]$|\vec{AB} \times \vec{AC}| = \sqrt{946}$
+\\[0.1in]$\sqrt{946}=\sqrt{19}\sqrt{134}\sin\theta$
+\\$\frac{\sqrt{946}}{\sqrt{19}\sqrt{134}}=\sin\theta$
+\\$\arcsin\frac{\sqrt{946}}{\sqrt{19}\sqrt{134}}=\theta$
+\\[0.1in]\boxed{\theta=37.56\degree}
+\subsection{Linear Equation of Plane Containing points A,B,C}
+Using equation $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$ where $a, b, c$ are components of the normal vector $\vec{n}$ and $(x_0,y_0,z_0)$ are coordinates for a reference points, in this case point $A(2, 6, 5)$
+\\[0.1in]$\vec{AB} \times \vec{AC} = $
+$\begin{vmatrix}
+i & j & k \\
+-3 & -3 & -1 \\
+-3 & -11 & 2
+\end{vmatrix}$
+\\[0.1in]$\vec{AB} \times \vec{AC} = i(-3\cdot2-(-1)\cdot -11)-j(-3\cdot 2-(-1)\cdot -3)+k(-3\cdot-11-(-3)\cdot -3)$
+\\[0.1in]$\vec{AB} \times \vec{AC} = i(-6-11)-j(-6-3)+k(33-9)$
+\\[0.1in]$\vec{AB} \times \vec{AC} = i(-17)-j(-9)+k(24)$
+\\[0.1in]$\vec{AB} \times \vec{AC} = \langle-17,-9,24\rangle$
+\\[0.1in] Let $\vec{n} = \langle a,b,c\rangle=\langle-17,-9,24\rangle$
+\\[0.1in]Plugging things in, we get ${-17(x-2)+9(y-6)+24(z-5)=0}$
+\\[0.1in]${-17x+34+9y-54+24z-120)=0}$
+\\[0.1in]\boxed{-17x+9y+24z=140}
+\subsection{Coplanarity with $D(-2, 6,-4)$}
+To see if point $D(-2, 6,-4)$ lies on the plane $-17(x-2)+9(y-6)+24(z-5)=0$, we can plug in the coordinates
+\\[0.1in]$-17(-2-2)+9(6-6)+24(-4-5)=0$
+\\[0.1in]$-17(-4)+9(0)+24(-9)=0$
+\\[0.1in]$68-216=0$
+\\[0.1in]$-148=0$ This is obviously not true, meaning point \boxed{D $ is not coplanar with points $ A,B,C}
+\subsection{Volume of the Parallelepiped}
+Volume can be found using the formula provided by the textbook $V=|\vec{a}\cdot (\vec{b}\times \vec{c})|$
+\\Lets refresh on our points and vectors: 
+\\Points: $A(2, 6, 5), B(-1, 3, 4), C(-1, -5, 7), D(-2,6,-4)$
+\\Vectors:$\vec{AB}=\langle-3,-3,-1\rangle$, $\vec{AC}=\langle-3,-11,2\rangle$, $\vec{BC}=\langle0,-8,3\rangle$
+\\Calculating vector $\vec{AD}$
+\\$\vec{AD} = D-A$
+\\$\vec{AD} = \langle-2-2,6-6, -4-5\rangle$
+\\$\vec{AD} = \langle-4,0, -9\rangle$
+\\Now we can use the Volume Formula using $\vec{a} = \vec{AB}, \vec{b} = \vec{AC}, \vec{c} = \vec{AD}$
+\\\textbf{Calculating $\vec{b}\times\vec{c}$}
+\\[0.1in]$\vec{b}\times\vec{c} = \vec{AC}\times\vec{AD}$
+\\[0.1in]$\vec{AC} \times \vec{AD} = $
+$\begin{vmatrix}
+i & j & k \\
+-3 & -11 & 2\\
+-4 & 0 & -9
+\end{vmatrix}$
+\\[0.1in]$\vec{AC} \times \vec{AD} = i(-11\cdot-9-2\cdot 0)-j(-3\cdot -9-(-4)\cdot 2)+k(-3\cdot0-(-11)\cdot -4)$
+\\[0.1in]$\vec{AC} \times \vec{AD} = i(99)-j(35)+k(-44)$
+\\[0.1in]$\vec{AC} \times \vec{AD} = \langle99,-35,-44\rangle$
+\\[0.1in]$\vec{b} \times \vec{c} = \langle99,-35,-44\rangle$
+\\[0.1in]\textbf{Calculating the dot product with $\vec{a} \cdot \vec{b}\times\vec{c}$}
+\\[0.1in]$\langle-3,-3,-1\rangle\cdot\langle99,-35,-44\rangle$
+\\[0.1in]$=-3\times99+-3\times-35+-1\times-44$
+\\[0.1in]$=-297+105+44$
+\\[0.1in]$=-148$
+\\[0.1in]To top it all off, take the absolute value of the result $V= |-148| =$ \boxed{148 $ units$^3}
+
+
 \end{document}
