@@ -192,7 +192,6 @@ The series converges if $ \left|\dfrac{x+5}{3}\right|<1$
 \\[0.1in]After testing endpoints, we can conclude the interval of convergence is  \boxed{-8  < x \leq -2}
 
 \end{multicols*}
-
 \section{$ f(x)=\dfrac{x^2}{3x+4}$}
 \subsection*{Conversion to a power series}
 To be easily converted to a power series $ \sum_{n=0}^{\infty}ar^n$, the equation will need the form of $ \frac{a}{1-r}$
@@ -246,5 +245,67 @@ The series converges if $\left|   \dfrac{-3x}{4} \right| < 1$
     \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{16}{4\cdot 9}$
     \\[0.05in]$ =\sum_{n=2}^{\infty}\dfrac{4}{9}$
     \\[0.05in]This series is divergent by the Ratio Test, where the ratio is 1, meaning the lower endpoint can not be included in the interval of convergence
+    \pagebreak
 \end{multicols*}
+\section{$f(x) = 3^{-2x}$}
+\begin{multicols*}{2}
+    \subsection*{Finding the first 6 coefficients $\frac{f^{(n)}(0)}{n!}$}
+    \textbf{0:}$f(x) =  3^{-2x}= 9^{-x} = \frac{1}{9^x}$ at $x=0$
+    \\[0.05in]$\frac{1}{9^0}=1$ then dividing by 0! $\frac{1}{0!}=$\boxed{1}
+    \\[0.05in]\textbf{1:}$f'(x) = \frac{d}{dx} 3^{-2x}=\frac{d}{dx} 9^{-x} =\frac{d}{dx} \frac{1}{9^x}$
+    \\[0.1in]using the quotient rule $\frac{d}{dx} \frac{1}{9^x} = \frac{0\cdot9^x-9^x(\ln9)}{9^{2x}}$
+    \\[0.1in]$= \frac{-9^x(\ln9)}{9^{2x}}$
+    \\[0.1in]$= \frac{-\ln9}{9^{x}}$ where $x=0$
+    \\[0.1in]$= \frac{-\ln9}{9^{0}}=-\ln9$
+    \\[0in] dividing by $1!$ we get $\boxed{\frac{-\ln9} {1!}}$
+    \\[0.1in]\textbf{2:}$f''(x) = \frac{d}{dx} \frac{-\ln9}{9^{x}}$
+    \\[0.1in]Using the quotient rule, again \\[0.02in]$\frac{d}{dx} \frac{-\ln9}{9^{x}}= \frac{0\cdot 9^x -(-\ln9\cdot9^x(\ln9))}{9^{2x}}$
+    \\[0.1in] $= \frac{\ln9\cdot9^x(\ln9)}{9^{2x}}$
+    \\[0.1in] $= \frac{\ln9(\ln9)}{9^{x}}$ where $x=0$
+    \\[0.1in] $= (\ln9)(\ln9) $ or $(\ln(9))^2$
+    \\[0in]Dividing by 2! we get $\boxed{\frac{(\ln(9))^2}{2!}}$
+    \\[0.1in]\textbf{3:} $f'''(x)= \frac{d}{dx} \frac{(\ln(9))^2}{9^{x}}$ 
+    \\[0.1in]Using the quotient rule, again \\[0.05in]$\frac{d}{dx} \frac{(\ln(9))^2}{9^{x}} = \frac{0*9^x-(\ln(9))^2\cdot9^x\ln9}{9^{2x}}$ 
+    \\[0.1in] $ = \frac{-(\ln(9))^2\cdot9^x\ln9}{9^{2x}}$ 
+    \\[0.1in] $ = \frac{-(\ln(9))^3}{9^{x}}$ where $x=0$
+    \\[0.1in] = ${-(\ln(9))^3}$
+    \\[0in] dividing by $3!$ we get $\boxed{\frac{-(\ln(9))^3} {3!}}$
+    \vfill\null
+    \columnbreak
+    \textbf{4: }$f^{(4)}(x)= \frac{d}{dx} \frac{-(\ln(9))^3}{9^{x}}$
+    \\[0.1in]Using the quotient rule, again $\frac{d}{dx} \frac{-(\ln(9))^3}{9^{x}} = \frac{0*9^x-(-(\ln(9))^3\cdot9^x\ln9}{9^{2x}}$ 
+    \\[0.1in]$= \frac{(\ln(9))^3\cdot9^x\ln9}{9^{2x}}$ 
+    \\[0.1in]$= \frac{(\ln(9))^4}{9^{x}}$ where $x=0$, evaluates to ${(\ln(9))^4}$
+    \\\\[0in]Dividing by 4! we get $\boxed{\frac{(\ln(9))^4}{4!}}$
+    \\[0.1in]\textbf{5: }$f^{(5)}(x)= \frac{d}{dx} \frac{(\ln(9))^4}{9^{x}}$
+    \\[0.1in]Using the quotient rule, for the last time \\[0.1in]$\frac{d}{dx}\frac{(\ln(9))^4}{9^{x}} = \frac{0*9^x-(\ln(9))^4\cdot9^x\ln9}{9^{2x}}$ 
+    \\[0.1in]$ = \frac{0*9^x-(\ln(9))^4\cdot9^x\ln9}{9^{2x}}$ 
+    \\[0.1in]$ = \frac{-(\ln(9))^4\cdot9^x\ln9}{9^{2x}}$ 
+    \\[0.1in]$ = \frac{-(\ln(9))^5\cdot9^x}{9^{2x}}$ 
+    \\[0.1in]$ = \frac{-(\ln(9))^5}{9^{x}}$ where $x=0$, evaluates to ${-(\ln(9))^5}$
+    \\\\[0in]Dividing by 5! we get $\boxed{\frac{-(\ln(9))^5}{5!}}$
+    \\[0.05in]
+    \vfill\null
+    \pagebreak
+    \textbf{First 6 coefficients:}
+    \begin{enumerate}
+        \setcounter{enumi}{-1}
+        \item $1$
+        \item $\frac{-\ln9}{1!}$
+        \item $\frac{(\ln(9))^2}{2!}$
+        \item $\frac{-(\ln(9))^3}{3!}$
+        \item $\frac{(\ln(9))^4}{4!}$
+        \item $\frac{-(\ln(9))^5}{5!}$
+    \end{enumerate}
+    The emergent pattern seems to be \boxed{\frac{f^{(n)}(0)}{n!}=\frac{(-\ln(9))^n}{n!}}
+    \subsection*{\textbf{The Maclaurin Series}}
+    Using the known coefficient pattern, we can multiply the general term by $x^n$ and make it a summation \boxed{\sum_{n=0}^{\infty}\frac{f^{(n)}(0)}{n!}x^n=\sum_{n=0}^{\infty}\frac{(-\ln(9))^n}{n!}x^n}
+
+\end{multicols*}
+\section{Line L passes through $A(4, -3, 5)$ and $B(-2, -1, 8)$}
+For the purposes of this problem, I will use the vector going in the direction from points $A$ to $B$
+\\
+\subsection*{Vector Equation}
+\subsection*{Parametric Equations}
+\subsection*{Symmetric Equation}
 \end{document}
